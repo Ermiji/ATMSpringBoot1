@@ -15,9 +15,7 @@ public class Transaction {
 
     @Transient
     private boolean withdrawal;
-    @Transient
     private boolean deposit;
-    @Transient
     private boolean checkBalance;
 
     @NotNull

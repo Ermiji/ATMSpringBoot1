@@ -10,14 +10,17 @@
           th:action="@{/withdraw}"
           th:object="${transaction}"
           method="get">
-        Account Number :<input type="text" th:field="*{acctNo}" th:required="required"/>
+        <p>Account Number: <input type="text" th:field="*{actNo}" th:required="required" />
             <span th:if="${#fields.hasErrors('actNo')}" th:errors="*{actNo}"></span><br />
+        </p>
+        <p>Amount to Withdraw :<input type="text" th:field="*{amount}" th:required="required" />
+            <span th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></span>
+        </p>
 
-        Amount to withdraw :<input type="text" th:field="*{amount}" th:required="required" />
-            <span th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></span><br />
-
-            <br />
-        <input type="hidden" th:field= "*{withdrawal}" th:value = "*{withdrawal}"/><br />
+        <p>Check Balance :<input type="text" th:field="*{amount}" th:required="required" />
+            <span th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></span></p><br />
+        <br />
+        <input type="hidden" th:field= "*{deposit}" th:value = "*{deposit}" /><br />
         <input type="submit" value="Submit" />
 
     </form>
