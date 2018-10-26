@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Account Form</title>
+
+</head>
+<body>
+<p>Transaction Successful!</p>
+
+<p th:if="${transaction.action == 'deposit'}"> You deposited <span th:text="${transaction.amount}"/> amount</p><br />
+
+<p th:if="${transaction.action == 'withdrawal'}"> You withdraw <span th:text="${transaction.amount}"/> amount</p><br />
+
+<p th:if="${transaction.action == 'balance'}"> Your balance is <span th:text="${transaction.balance}"/> balance</p><br/>
+<br/>
+
+</body>
+</html>

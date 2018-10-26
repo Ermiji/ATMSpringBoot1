@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Deposit Form</title>
+</head>
+<body>
+<div>
+    <form action="#"
+          th:action="@{/deposit}"
+          th:object="${transaction}"
+          method="get">
+    <p>Account Number: <input type="text" th:field="*{actNo}" th:required="required" />
+    <span th:if="${#fields.hasErrors('actNo')}" th:errors="*{actNo}"></span><br />
+    </p>
+        <p>Amount to Deposit :<input type="text" th:field="*{amount}" th:required="required" />
+        <span th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></span>
+        </p>
+
+    <p>Check Balance :<input type="text" th:field="*{amount}" th:required="required" />
+        <span th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></span></p><br />
+        <br />
+        <input type="hidden" th:field= "*{deposit}" th:value = "*{deposit}" /><br />
+        <input type="submit" value="Submit" />
+
+    </form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

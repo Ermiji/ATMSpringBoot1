@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction Form</title>
+</head>
+<body>
+<!--<a href="/">List the Transaction Activity</a>-->
+<table>
+    <h>Transactions</h>
+    <tr>
+        <th>Amount</th>
+        <th>Transaction type</th>
+        <th>Balance</th>
+    </tr>
+    <tr th:each="transaction, status: ${transactions}">
+        <td th:text="${transaction.amount}"></td>
+        <td th:text="${transaction.action}"></td>
+        <td th:text="${balance[status.index}"></td>
+    </tr>
+</table>
+</body>
+</html>
+

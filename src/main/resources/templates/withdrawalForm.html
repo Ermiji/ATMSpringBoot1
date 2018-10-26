@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Withdrawal Form</title>
+</head>
+<body>
+<div>
+    <form action="#"
+          th:action="@{/withdraw}"
+          th:object="${transaction}"
+          method="get">
+        Account Number :<input type="text" th:field="*{acctNo}" th:required="required"/>
+            <span th:if="${#fields.hasErrors('actNo')}" th:errors="*{actNo}"></span><br />
+
+        Amount to withdraw :<input type="text" th:field="*{amount}" th:required="required" />
+            <span th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></span><br />
+
+            <br />
+        <input type="hidden" th:field= "*{withdrawal}" th:value = "*{withdrawal}"/><br />
+        <input type="submit" value="Submit" />
+
+    </form>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
