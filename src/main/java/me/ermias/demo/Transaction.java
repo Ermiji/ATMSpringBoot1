@@ -12,19 +12,18 @@ public class Transaction {
 
     @NotNull
     private long actNo;
-//    private String reason;
-//    private Double amount;
+
     @Transient
     private boolean withdrawal;
     @Transient
     private boolean deposit;
     @Transient
-    //private boolean checkBalance;
-    private String action;
+    private boolean checkBalance;
+
     @NotNull
     private double amount;
     private String reason;
-
+    private String action;
 
     public Transaction(){
 
